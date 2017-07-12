@@ -21,6 +21,15 @@ For convenience sake, this allows you expand the possibilites when creating `Aut
 2. Restart any open CMD instance (That includes built-in ones like **Scite** and other IDE's)
 3. Done
 
+### FAQ
+**Q:** How do i run files with spaces?
+**A:** Encapsulate the name with double qoutes `""`. Example: `au3 "my file"`
+
+**Q:** How do i pass parameters?
+**A:** Every parameter after the `<File>` input are parsed as parameters, grab them in the script using `$CmdLine`. Example: `au3 myfile param1 param2 param3`
+See more on how Autoit handles parameters [Here](https://www.autoitscript.com/autoit3/docs/intro/running.htm)
+
+
 ### Scripts (For "Advanced users")
 Scripts can be used to make aliases for any command(s) you wish to run often
 
