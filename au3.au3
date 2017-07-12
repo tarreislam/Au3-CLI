@@ -67,7 +67,7 @@ Global $sLine
 
 While 1
 	$sLine = StdoutRead($iPid)
-	If @error Then Exit
+	If @error Or Not ProcessExists($iPid) Then Exit
 	If $sLine <> '' Then ConsoleWrite($sLine)
 WEnd
 
