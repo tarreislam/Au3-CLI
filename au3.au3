@@ -53,7 +53,7 @@ EndIf
 ; Check if any scripts should be ran
 If $CmdLine[1] == "run" Then
 	If $CmdLine[0] < 2 Then
-		ConsoleWrite("Usage: 'au3 run <name>'" & @LF)
+		ConsoleWrite("Usage: 'au3 run <Script name>'" & @LF)
 		Exit
 	EndIf
 	runScript($CmdLine[2])
