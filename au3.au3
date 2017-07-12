@@ -89,7 +89,12 @@ Func runScript($scriptname)
 	For $i = 0 To $aScripts[0][0]
 		If $aScripts[$i][0] == $scriptname Then
 			ConsoleWrite(StringFormat("Running script '%s'", $scriptname) & @LF)
-			RunWait($aScripts[$i][1])
+			Local $aScriptConent = StringSplit($aScripts[$i][1], "|")
+
+			For $j = 1 To $aScriptConent[0]
+				RunWait($aScriptConent[$j])
+			Next
+
 			Exit
 		EndIf
 	Next
