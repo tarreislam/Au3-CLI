@@ -34,6 +34,7 @@ If Not @Compiled Then
 
 	; Compile
 	If $has_exe == 0 Then
+		If Not FileExists($sDesiredDir) Then DirCreate($sDesiredDir)
 		RunWait(StringFormat('"%s" /in "%s" /out "%s" /console', $sCompilerPath, @ScriptFullPath, $sDesiredFullPath))
 	EndIf
 
